@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,55 +13,54 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="84k-1S-joZ">
-                                <rect key="frame" x="20" y="139" width="374" height="628"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdU-mX-3rg" userLabel="Top">
-                                <rect key="frame" x="193" y="157" width="28" height="18.5"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yf-jv-sbR">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="jn6-XK-10d"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="370" width="736" height="44"/>
                                 <items>
-                                    <barButtonItem image="camera" catalog="system" width="330.5" id="QqH-6V-tgp" userLabel="Camera">
+                                    <barButtonItem image="camera" catalog="system" width="368" id="QqH-6V-tgp" userLabel="Camera">
                                         <connections>
                                             <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="zpw-6l-whM"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Album" width="214" id="f4b-1K-FFG" userLabel="Album">
+                                    <barButtonItem title="Album" width="368" id="f4b-1K-FFG" userLabel="Album">
                                         <connections>
                                             <action selector="pickImageFromAlbum:" destination="BYZ-38-t0r" id="8du-c4-j9R"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gOj-fg-ye0" userLabel="Bottom">
-                                <rect key="frame" x="177" y="722" width="60" height="18.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="84k-1S-joZ">
+                                <rect key="frame" x="173" y="40" width="390" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="6ow-vP-A15"/>
+                                    <constraint firstAttribute="width" constant="390" id="kbU-Vb-tp1"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdU-mX-3rg" userLabel="Top">
+                                <rect key="frame" x="353" y="50" width="28" height="18.666666666666671"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gOj-fg-ye0" userLabel="Bottom">
+                                <rect key="frame" x="337" y="301.66666666666669" width="60" height="18.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="84k-1S-joZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="1jV-AA-raL"/>
-                            <constraint firstItem="84k-1S-joZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="57q-e3-3Ur"/>
-                            <constraint firstItem="gOj-fg-ye0" firstAttribute="bottom" secondItem="84k-1S-joZ" secondAttribute="bottom" constant="-26.5" id="Epy-Ql-1fV"/>
-                            <constraint firstItem="gOj-fg-ye0" firstAttribute="leading" secondItem="84k-1S-joZ" secondAttribute="leading" constant="157" id="VQh-wl-WUW"/>
-                            <constraint firstItem="84k-1S-joZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bzv-NT-BNn"/>
-                            <constraint firstItem="5yf-jv-sbR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c3H-b0-uq3"/>
-                            <constraint firstItem="84k-1S-joZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="csg-O4-toh"/>
-                            <constraint firstItem="5yf-jv-sbR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lFH-ln-z6N"/>
-                            <constraint firstItem="5yf-jv-sbR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lOY-YJ-8vg"/>
-                            <constraint firstItem="hdU-mX-3rg" firstAttribute="leading" secondItem="84k-1S-joZ" secondAttribute="leading" constant="173" id="w9r-Rh-wUh"/>
-                            <constraint firstItem="hdU-mX-3rg" firstAttribute="top" secondItem="84k-1S-joZ" secondAttribute="top" constant="18" id="zND-RP-UKx"/>
+                            <constraint firstItem="84k-1S-joZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-22" id="BxI-mv-blS"/>
+                            <constraint firstItem="84k-1S-joZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CjZ-XH-mTJ"/>
+                            <constraint firstItem="5yf-jv-sbR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ja1-YI-R5A"/>
+                            <constraint firstItem="gOj-fg-ye0" firstAttribute="bottom" secondItem="84k-1S-joZ" secondAttribute="bottom" constant="-10" id="JtO-FL-xq3"/>
+                            <constraint firstItem="5yf-jv-sbR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NDQ-0s-bWS"/>
+                            <constraint firstItem="hdU-mX-3rg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-1" id="awo-zv-jVV"/>
+                            <constraint firstItem="gOj-fg-ye0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-1" id="cdG-bV-cZD"/>
+                            <constraint firstItem="hdU-mX-3rg" firstAttribute="top" secondItem="84k-1S-joZ" secondAttribute="top" constant="10" id="nug-vR-2a2"/>
+                            <constraint firstItem="5yf-jv-sbR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="s6t-fb-uq6"/>
                         </constraints>
                     </view>
                     <connections>
