@@ -16,6 +16,9 @@ class BottomTextFieldDelegate: NSObject, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.text! == "" {
+            textField.text = "BOTTOM"
+        }
         textField.resignFirstResponder()
         return true
     }
